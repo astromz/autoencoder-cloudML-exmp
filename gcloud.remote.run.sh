@@ -2,7 +2,9 @@
 # set ups
 export JOB_NAME="mnist_AE_$(date +%Y%m%d_%H%M%S)"
 
-export BUCKET_NAME=nyt-dse-prd/mz_bucket
+# Change this to your actual project name and bucket name
+export BUCKET_NAME=my-project/my_bucket
+
 export JOB_DIR=gs://$BUCKET_NAME/$JOB_NAME/
 export REGION=us-east1
 
