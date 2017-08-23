@@ -59,7 +59,10 @@ if __name__ =='__main__':
                         default=5, type=int)
 
     parser.add_argument('--batch_norm_before_activation', help='Put batch_norm layer before activation',
-                    default=False, action='store_true')
+                        default=False, action='store_true')
+
+    parser.add_argument('--pool_method', help='Pooling method, either "max" or "average"',
+                        default="max")
 
     args = parser.parse_args()
     arguments = args.__dict__

@@ -1,0 +1,5 @@
+pyYaml>=3.12
+keras>=2.0
+scikit-learn
+tensorflow >=1.2
+h5py

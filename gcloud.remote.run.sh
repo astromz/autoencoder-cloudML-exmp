@@ -32,4 +32,5 @@ gcloud ml-engine jobs submit training $JOB_NAME \
   --optimizer_name "adam" \
   --n_epochs 100 \
   --patience 5 \
+  --pool_method "average" \
   --batch_norm_before_activation
