@@ -1,5 +1,5 @@
 
-# set ups
+# Example to run cloud ML on gcloud (using GPU if specified in cloudml-gpu.yaml)  
 export JOB_NAME="mnist_AE_$(date +%Y%m%d_%H%M%S)"
 
 # Change this to your actual project name and bucket name

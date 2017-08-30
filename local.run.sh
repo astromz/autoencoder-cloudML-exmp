@@ -1,5 +1,5 @@
 
-# set ups
+# Example to run gcloud ML locally
 export JOB_NAME="mnist_ae_$(date +%Y%m%d_%H%M%S)"
 export JOB_DIR="./tmp/local_train_$JOB_NAME/"
 
