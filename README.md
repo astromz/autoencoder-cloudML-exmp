@@ -14,7 +14,7 @@ Set up Google Cloud Platform. Follow this [link](https://cloud.google.com/ml-eng
   - Initialize your gcloud environment at command line: ** `gcloud init` **
   	+ set up your email account, region (us-east is among the cheapest), etc.
   - And here is an [overview of the Cloud ML Engine](https://cloud.google.com/ml-engine/docs/concepts/technical-overview)
-  - **Note**: Please follow the exact folder structure when making your own cloud ML package after trying this example. Change `setup.py` and `trainer.task.py` accordingly. For detailes, check [here](https://cloud.google.com/ml-engine/docs/images/recommended-project-structure.png) and [here](https://cloud.google.com/ml-engine/docs/how-tos/packaging-trainer)
+  - **Note**: Please follow the exact folder structure when making your own cloud ML package after trying this example. Change `setup.py` and `trainer.task.py` accordingly. For details, check [here](https://cloud.google.com/ml-engine/docs/images/recommended-project-structure.png) and [here](https://cloud.google.com/ml-engine/docs/how-tos/packaging-trainer)
 
 ## Training
  - To train model locally, run the following shell script on command line. It should take <10 min since `n_epochs` is set to only `3`.
