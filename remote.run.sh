@@ -12,9 +12,6 @@ echo ""
 echo "job dir =$JOB_DIR"
 echo "job name= $JOB_NAME"
 
-# Make bucket
-#gsutil mb -l us-east1 $JOB_DIR 
-# gsutil -m rm -rf gs://$BUCKET_NAME/$JOB_NAME
 
 gcloud ml-engine jobs submit training $JOB_NAME \
   --module-name trainer.task \

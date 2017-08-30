@@ -11,24 +11,24 @@ Set up Google Cloud Platform. Follow this [link](https://cloud.google.com/ml-eng
   - Selecte or create a project on Google Cloud Platform
   - Enable billing
   - Install the [Gooogle Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-mac-os-x#before-you-begin) 
-  - Initialize yout gcloud environment at command line: `gcloud init`
+  - Initialize yout gcloud environment at command line: ** `gcloud init` **
   	+ set up your email account, region (us-east is among the cheapest), etc.
   - And here is an [overview of the Cloud ML Engine](https://cloud.google.com/ml-engine/docs/concepts/technical-overview)
-
+  - **Note**: Please follow the exact folder structure when making your own cloud ML package after trying this example. Change `setup.py` and `trainer.task.py` accordingly. For detailes, check [here](https://cloud.google.com/ml-engine/docs/images/recommended-project-structure.png) and [here](https://cloud.google.com/ml-engine/docs/how-tos/packaging-trainer)
 
 ## Training
  - To train model locally, run the following shell script on command line. It should take <10 min since `n_epochs` is set to only `3`.
 
-		$ ./gcloud.local.run.sh 
+		$ ./local.run.sh 
 
  - To train remotely on Google cloud ML engine, 
      + First make sure you have created a project (e.g., my_first_proj) and create a bucket (a folder in cloud storage, e.g., my_bucket)
-     + Change the environment variable `BUCKET_NAME` in `gcloud.remote.run.sh` accordingly.
+     + Change the environment variable `BUCKET_NAME` in `remote.run.sh` accordingly.
      + Make sure your `REGION` variable is set correctly
-     + Change `--n_epochs` to say, 10, in `gcloud.remote.run.sh`, for a quick test
+     + Change `--n_epochs` to say, 10, in `remote.run.sh`, for a quick test
      + Run the following command:
 
-  			$ ./gcloud.remote.run.sh
+  			$ ./remote.run.sh
 
   + Now follow the output instructions in the command line to either stream your log or check your log in GCP console.
 
