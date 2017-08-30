@@ -8,10 +8,10 @@ Meanwhile the example allows the exploration of using "deconv" layers (i.e., tra
 ## Prerequisite
 Set up Google Cloud Platform. Follow this [link](https://cloud.google.com/ml-engine/docs/quickstarts/command-line) to:
 
-  - Selecte or create a project on Google Cloud Platform
-  - Enable billing
-  - Install the [Gooogle Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-mac-os-x#before-you-begin) 
-  - Initialize yout gcloud environment at command line: ** `gcloud init` **
+  - Select or create a project on Google Cloud Platform
+  - For first time users, enable billing. You can sign up for a free trial with $300 credits.
+  - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-mac-os-x#before-you-begin) 
+  - Initialize your gcloud environment at command line: ** `gcloud init` **
   	+ set up your email account, region (us-east is among the cheapest), etc.
   - And here is an [overview of the Cloud ML Engine](https://cloud.google.com/ml-engine/docs/concepts/technical-overview)
   - **Note**: Please follow the exact folder structure when making your own cloud ML package after trying this example. Change `setup.py` and `trainer.task.py` accordingly. For detailes, check [here](https://cloud.google.com/ml-engine/docs/images/recommended-project-structure.png) and [here](https://cloud.google.com/ml-engine/docs/how-tos/packaging-trainer)
@@ -22,10 +22,10 @@ Set up Google Cloud Platform. Follow this [link](https://cloud.google.com/ml-eng
 		$ ./local.run.sh 
 
  - To train remotely on Google cloud ML engine, 
-     + First make sure you have created a project (e.g., my_first_proj) and create a bucket (a folder in cloud storage, e.g., my_bucket)
+     + First make sure you have created a project (e.g., my_first_proj) and a bucket (a folder in cloud storage, e.g., my_bucket)
      + Change the environment variable `BUCKET_NAME` in `remote.run.sh` accordingly.
      + Make sure your `REGION` variable is set correctly
-     + Change `--n_epochs` to say, 10, in `remote.run.sh`, for a quick test
+     + Change `--n_epochs` to say, 10, in `remote.run.sh`, for a quick test. You can change it to 100 later.
      + Run the following command:
 
   			$ ./remote.run.sh
@@ -33,7 +33,7 @@ Set up Google Cloud Platform. Follow this [link](https://cloud.google.com/ml-eng
   + Now follow the output instructions in the command line to either stream your log or check your log in GCP console.
 
 
-That is it! You now should have successfully trained your first convolutional autoencoder on Cloud ML. 
+That is it! You now should have successfully trained your first convolutional autoencoder on Cloud ML with 1 GPU. 
 
 ## Check your results
  - The code should automatically save two PDF figures, either on local disk or on gs bucket. You can check the learning curves there.
